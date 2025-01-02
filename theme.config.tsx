@@ -1,11 +1,11 @@
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  logo: <span>API Documentation</span>,
+  logo: <span>ASecureCloud Documentation</span>,
   project: {
-    link: 'https://github.com/yourusername/your-repo',
+    link: 'https://github.com/rachcorp/Docs',
   },
-  docsRepositoryBase: 'https://github.com/yourusername/your-repo',
+  docsRepositoryBase: 'https://github.com/rachcorp/Docs',
   navigation: {
     prev: true,
     next: true
