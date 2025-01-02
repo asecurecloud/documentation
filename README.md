@@ -2,16 +2,12 @@
 
 # Documentation Site
 
-This is a documentation site built with [Next.js](https://nextjs.org) and [Nextra](https://nextra.site), providing a modern documentation platform with built-in search, dark mode, and more.
+Welcome to the ASC documentation site.
 
 ## Features
 
-- 📝 MDX Support
-- 🎨 Customizable Theme
 - 🔍 Full-text Search
 - 🌗 Dark Mode
-- 📱 Responsive Design
-- 🚀 Fast Performance
 
 ## Getting Started
 
