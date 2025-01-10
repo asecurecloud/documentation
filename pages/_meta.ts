@@ -4,7 +4,7 @@ export default {
   compliance: "Compliance Reports",
   wellArchitected: "Well-Architected Reviews",
   privatePortal: "Private Portal",
-  // api: "API Reference",
+  apidocs: "API Documentation",
   // docs: "Documentation"
   "*": {
     theme: {

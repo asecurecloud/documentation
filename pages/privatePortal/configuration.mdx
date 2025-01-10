@@ -1,0 +1,157 @@
+# ASecureCloud Private Portal Configuration 
+
+## Initial Admin Access
+
+### First-Time Login
+1. Check your email for the initial setup message from ASecureCloud
+2. Click the temporary password link in the email
+3. Navigate to your custom portal domain (e.g., `portal.yourcompany.com`)
+4. Login with your email and the temporary password
+5. You will be prompted to create a new password that meets the following requirements:
+   * Minimum 12 characters
+   * At least one uppercase letter
+   * At least one lowercase letter
+   * At least one number
+   * At least one special character
+
+## Managing Portal Administrators
+
+### Creating New Administrators
+1. Navigate to "Settings" → "User Management"
+2. Click "Add Administrator"
+3. Fill in the required information:
+   * Email address
+   * First name
+   * Last name
+   * Role (Super Admin/Admin)
+   * Contact phone (optional)
+4. Click "Create Administrator"
+5. The new administrator will receive an email with temporary login credentials
+
+### Administrator Roles and Permissions
+* **Super Admin**
+  * Full access to all portal features
+  * Can create/modify other administrators
+  * Can manage all customer accounts
+  * Access to billing and subscription settings
+  * Can configure portal-wide settings
+
+* **Admin**
+  * Can manage customer accounts
+  * Can run assessments and generate reports
+  * Cannot create other administrators
+  * Cannot access billing settings
+
+## Customer Management
+
+### Onboarding New Customers
+1. Navigate to "Customers" → "Add Customer"
+2. Enter customer information:
+   * Company name
+   * Primary contact name
+   * Email address
+   * Phone number (optional)
+   * Billing information (if applicable)
+3. Click "Create Customer Account"
+4. The primary contact will receive an email with temporary login credentials
+
+### Configuring Customer Features
+
+#### Assessment Module Access
+1. Go to "Customers" → Select customer → "Feature Management"
+2. Under "Assessment Capabilities":
+   * Enable/disable security assessment module
+   * Configure assessment frequency
+   * Set custom assessment rules (if applicable)
+
+#### Compliance Reporting
+1. Select available compliance frameworks:
+   * SOC2
+   * PCI DSS
+   * HIPAA
+   * GDPR
+   * FedRAMP
+   * Custom frameworks
+2. Configure report generation settings:
+   * Automated scheduling
+   * Custom branding options
+   * Distribution lists
+
+#### Cloud Provider Access
+1. Configure cloud provider settings:
+   * AWS access
+   * Azure access
+   * GCP access (when available)
+2. Set up connection parameters:
+   * API credentials
+   * Role configurations
+   * Account linking
+
+#### Well-Architected Module
+1. Enable/disable Well-Architected capabilities
+2. Configure framework settings:
+   * Assessment templates
+   * Custom questionnaires
+   * Report formats
+
+### Customer Feature Packages
+You can create predefined feature sets based on service tiers:
+
+#### Basic Tier Example
+* Security assessments (AWS only)
+* Basic compliance reports
+* Monthly scanning
+* Standard support
+
+#### Professional Tier Example
+* Multi-cloud security assessments
+* All compliance frameworks
+* Weekly scanning
+* Well-Architected reviews
+* Priority support
+
+#### Enterprise Tier Example
+* Custom assessment rules
+* Custom compliance frameworks
+* Daily scanning
+* Advanced API access
+* Dedicated support
+
+## Best Practices
+
+### Customer Onboarding
+* Review requirements before setup
+* Document custom configurations
+* Schedule onboarding call
+* Provide training resources
+* Set up monitoring alerts
+
+### Feature Management
+* Align features with contracts
+* Document customer-specific configurations
+* Regular feature utilization review
+* Maintain feature upgrade path
+* Monitor usage patterns
+
+### Security
+* Regular password rotation
+* Two-factor authentication
+* Session timeout configuration
+* IP restriction setup (if required)
+* Access log monitoring
+
+## Troubleshooting
+
+### Common Issues
+* Password reset procedures
+* Access permission conflicts
+* Report generation errors
+* Assessment timing issues
+* Integration connectivity problems
+
+### Support Resources
+* Technical documentation
+* Knowledge base articles
+* Support ticket system
+* Emergency contacts
+* Scheduled maintenance windows

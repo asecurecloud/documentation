@@ -5,12 +5,14 @@ The API enables you to interact with ASecureCloud programmatically to automate a
 
 ## Getting Started
 To get started, you need to create an API key to be used for authenticating the requests. 
-Navigate to Dashboard > User Settings, and click on Generate API Keys
+Navigate to the Admin Portal Dashboard > Settings, and click on Configure API Keys
 
+![Settings](/images/adminportalAPI.png)
 
 ## Authentication
 The API key and secret key generated will be used in all API calls for authentication. They are passed in the authorization header with Basic Auth. which will be used in the API requests' authorization header using Basic Auth.
 
+## API Endpoints
 
 ### List managed AWS accounts
 
@@ -24,3 +26,20 @@ Parameters: None
 
 
 ![Postman Image in public folder](/images/get-accounts.webp)
+
+### Create a managed AWS account
+
+```api
+PATH: POST /accounts/
+```
+Description: Lists the configured AWS accounts associated with the ASecureCloud profile
+
+Parameters: 
+
+accountId (required) – AWS account id number (12 digits)
+
+description (required) – AWS account description
+```
+
+![Postman Image in public folder](/images/create-account.png)
+

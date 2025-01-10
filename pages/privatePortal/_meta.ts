@@ -1,3 +1,6 @@
 export default {
-  index: "Introduction"
+  index: "Introduction",
+  onboarding: "Onboarding Guide",
+  checklist: "Implementation Checklist",
+  configuration: "Portal Configuration ",
 }
