@@ -1,0 +1,26 @@
+# API Reference
+
+The API enables you to interact with ASecureCloud programmatically to automate actions such as onboarding accounts, updating settings, and launching security assessments. The api can be accessed at https://api.asecure.cloud/
+
+
+## Getting Started
+To get started, you need to create an API key to be used for authenticating the requests. 
+Navigate to Dashboard > User Settings, and click on Generate API Keys
+
+
+## Authentication
+The API key and secret key generated will be used in all API calls for authentication. They are passed in the authorization header with Basic Auth. which will be used in the API requests' authorization header using Basic Auth.
+
+
+### List managed AWS accounts
+
+```api
+PATH: GET /accounts/
+
+```
+Description: Lists all configured AWS accounts associated with the ASecureCloud profile
+
+Parameters: None
+
+
+![Postman Image in public folder](/images/get-accounts.webp)
