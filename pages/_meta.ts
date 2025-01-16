@@ -1,7 +1,10 @@
 export default {
   index: "Home",
+  gettingStarted: "Getting Started",
+  awsOrganizations: "AWS Organizations",
+  azureManagementGroups: "Azure Management Groups",
   cloudassessments: "Security Assessments",
-  compliance: "Compliance Reports",
+  reports: "Reports",
   wellArchitected: "Well-Architected Reviews",
   privatePortal: "Private Portal",
   apidocs: "API Documentation",

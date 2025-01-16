@@ -1,0 +1,94 @@
+# Getting Started with Asecurecloud
+
+This guide will help you get started with onboarding your cloud accounts for security monitoring and management.
+
+## Overview
+
+ASecurecloud provides comprehensive security monitoring for your cloud infrastructure across multiple providers. We currently support:
+
+- Amazon Web Services (AWS)
+  - Individual accounts
+  - AWS Organizations
+  
+- Microsoft Azure
+  - Individual subscriptions
+  - Management groups
+
+## Prerequisites
+
+Before you begin, ensure you have:
+
+- Administrative access to the AWS accounts or Azure subscriptions you want to monitor
+- For AWS Organizations: Organization Administrator access
+- For Azure Management Groups: Global Administrator or Management Group Administrator role
+
+## Onboarding Methods
+
+Asecurecloud offers two convenient methods for onboarding your cloud accounts:
+
+### 1. Template-Based Deployment
+
+Our template-based deployment provides a streamlined, automated approach:
+
+- **AWS**: CloudFormation templates for both individual accounts and organizations
+- **Azure**: ARM templates for subscriptions and management groups
+
+### 2. Console-Based Deployment
+
+The Asecurecloud console offers a guided, step-by-step onboarding experience:
+
+1. Log in to your Asecurecloud dashboard
+2. Navigate to "Account Onboarding"
+3. Choose your cloud provider
+4. Select the appropriate scope (individual account/subscription or organization/management group)
+5. Follow the interactive setup wizard
+
+## Detailed Onboarding Instructions
+
+### AWS Account Onboarding
+
+#### Individual Account
+1. Access the Asecurecloud console
+2. Select "AWS" as your cloud provider
+3. Choose "Individual Account"
+4. You can either:
+   - Deploy using our CloudFormation template
+   - Follow the console-based setup wizard
+
+#### AWS Organizations
+1. Access the Asecurecloud console
+2. Select "AWS" as your cloud provider
+3. Choose "AWS Organizations"
+4. Provide your organization's root account credentials
+5. Select the accounts you wish to monitor
+
+### Azure Account Onboarding
+
+#### Individual Subscription
+1. Access the Asecurecloud console
+2. Select "Azure" as your cloud provider
+3. Choose "Individual Subscription"
+4. You can either:
+   - Deploy using our ARM template
+   - Follow the console-based setup wizard
+
+#### Management Groups
+1. Access the Asecurecloud console
+2. Select "Azure" as your cloud provider
+3. Choose "Management Group"
+4. Authenticate with Global Administrator credentials
+5. Select the management groups to monitor
+
+## Next Steps
+
+After successful onboarding:
+1. Verify the connection status in your Asecurecloud dashboard
+2. Configure your security policies and compliance requirements
+3. Set up notifications and alerts
+4. Explore the security recommendations dashboard
+
+## Support
+
+If you encounter any issues during the onboarding process, please:
+
+- Contact [support](mailto:support@asecurecloud.com)
