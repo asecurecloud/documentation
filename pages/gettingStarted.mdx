@@ -20,7 +20,7 @@ Here you need to provide:
 - AWS Account Name / Description
 - Workload region (where the workload is deployed, e.g. us-east-1)
 - Account Type (Production, Dev, Sandbox)   `used for rule severity weighting`
-- Scheduled Assessments toggle on/off (default is on)
+- Enable Scheduled Assessments on/off (default is On)
 
 Once done, click on the "Add Account and Create Profile" button.
 
@@ -61,31 +61,67 @@ You can now click on the "Create Profile and Launch Assessment" button.
 
 ## Add an Azure subscription
 
-#### Individual Subscription
-1. Access the Asecurecloud console
-2. Select "Azure" as your cloud provider
-3. Choose "Individual Subscription"
-4. You can either:
-   - Deploy using our ARM template
-   - Follow the console-based setup wizard
+### Add an Azure Tenant
 
-#### Management Groups
-1. Access the Asecurecloud console
-2. Select "Azure" as your cloud provider
-3. Choose "Management Group"
-4. Authenticate with Global Administrator credentials
-5. Select the management groups to monitor
+Click on the "Add Azure Tenant" button. You can also go to Settings -> Cloud Settings -> Add Azure Tenant
 
-## Next Steps
+In the pop-up window, you need to provide:
 
-After successful onboarding:
-1. Verify the connection status in your Asecurecloud dashboard
-2. Configure your security policies and compliance requirements
-3. Set up notifications and alerts
-4. Explore the security recommendations dashboard
+- Scope (Azure + EntraID, EntraID only, or M365)
+- Azure Tenant ID
+- Azure Tenant Name / Description
+- Endpoint type (Azure Public or Azure Government)
+- Enable Scheduled Assessments (default is On)
+
+Once done, click on the "Next: Subscription Onboarding Method" button.
+
+### Subscription Onboarding Method
+
+In this step, you can either provide 
+
+- Azure Subscription ID (multiple subscriptions are supported )
+- Onboard a Management Group and list all subscriptions in the management group for you to choose from
+
+Select "Manually enter Subscription IDs" and click on "Next:Input Subscriptions" button.
+
+
+### Input Subscriptions IDs
+
+You can now input the Azure Subscription IDs. For each subscription, you need to provide:
+
+- Subscription ID
+- Subscription Description
+- Environment (Dev, Test, Production)
+
+Click on + Additional Subscription button to add more subscription ID.
+
+Once done, click on the "Next: Varify Connection" button.
+
+### Varify Connection
+
+Using the information you provided, the system will generate various templates including:
+
+- Terraform template
+- PowerShell script
+- Manual steps
+
+Download the template to deploy to Azure and create the Service Principal.
+
+Once created in Azure , You will need to collect the Service Principal details and enter them in the varify connection window.
+
+- client ID
+- client secret
+- tenant ID
+
+If the connection is successful, you will see a green checkmark.
+
+Once done, click on the "Save Settings" button.
 
 ## Support
 
-If you encounter any issues during the onboarding process, please:
+If you encounter any issues during the onboarding process, please contact [support](mailto:support@asecurecloud.com)
 
-- Contact [support](mailto:support@asecurecloud.com)
+
+## Next Steps
+
+After successful onboarding, it's time to review the [assessment results](/cloudassessment).
