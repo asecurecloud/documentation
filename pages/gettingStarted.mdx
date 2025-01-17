@@ -1,68 +1,65 @@
-# Getting Started with Asecurecloud
+# Getting Started with ASecureCloud
 
-This guide will help you get started with onboarding your cloud accounts for security monitoring and management.
+Sign in to your ASecureCloud account or Sign up for a free trial.
 
-## Overview
+Once signed in, you can :
 
-ASecurecloud provides comprehensive security monitoring for your cloud infrastructure across multiple providers. We currently support:
+- add an [AWS account](#add-an-aws-account)
+- add an [Azure subscription](#add-an-azure-subscription)
 
-- Amazon Web Services (AWS)
-  - Individual accounts
-  - AWS Organizations
+You can also find instructions to add an [AWS Organization](gettingStarted/awsOrganizations) or an [Azure Management Group](gettingStarted/azureManagementGroups).
+
+## Add an AWS account
+
+Click on the "New AWS Account" button. You can also go to Settings -> Cloud Settings -> New AWS Account
+
+### Add your AWSccount details
+Here you need to provide:
+
+- AWS Account ID
+- AWS Account Name / Description
+- Workload region (where the workload is deployed, e.g. us-east-1)
+- Account Type (Production, Dev, Sandbox)   `used for rule severity weighting`
+- Scheduled Assessments toggle on/off (default is on)
+
+Once done, click on the "Add Account and Create Profile" button.
+
+
+### Create the authentication profile
+
+Here you select permissions for the ASecureCloud to access your AWS account.
+
+- Read-only access (default)
+- Read/Write access to the well-Architected tool (if you want to write back to the Well-Architected tool)
+
+Note : You can select read-only or none if you do not use the well-Architected tool.
+
+Once done, click on the "Continue Profile Setup" button.
   
-- Microsoft Azure
-  - Individual subscriptions
-  - Management groups
 
-## Prerequisites
+### Finalize the profile setup
 
-Before you begin, ensure you have:
+Select the IAM Role Name that will be used to access your AWS account.
 
-- Administrative access to the AWS accounts or Azure subscriptions you want to monitor
-- For AWS Organizations: Organization Administrator access
-- For Azure Management Groups: Global Administrator or Management Group Administrator role
+The system will generate a template for you in both 
+- cloudformation
+- terraform
 
-## Onboarding Methods
+You can deploy this template directly to your AWS account (recommended) or download it for a manual deployment.
 
-Asecurecloud offers two convenient methods for onboarding your cloud accounts:
+Once done, click on the "Validate" button.
 
-### 1. Template-Based Deployment
+### Validate the profile
 
-Our template-based deployment provides a streamlined, automated approach:
+if the profile is valid, you will see a green checkmark.
 
-- **AWS**: CloudFormation templates for both individual accounts and organizations
-- **Azure**: ARM templates for subscriptions and management groups
+You can now click on the "Create Profile and Launch Assessment" button.
 
-### 2. Console-Based Deployment
 
-The Asecurecloud console offers a guided, step-by-step onboarding experience:
 
-1. Log in to your Asecurecloud dashboard
-2. Navigate to "Account Onboarding"
-3. Choose your cloud provider
-4. Select the appropriate scope (individual account/subscription or organization/management group)
-5. Follow the interactive setup wizard
 
-## Detailed Onboarding Instructions
 
-### AWS Account Onboarding
-
-#### Individual Account
-1. Access the Asecurecloud console
-2. Select "AWS" as your cloud provider
-3. Choose "Individual Account"
-4. You can either:
-   - Deploy using our CloudFormation template
-   - Follow the console-based setup wizard
-
-#### AWS Organizations
-1. Access the Asecurecloud console
-2. Select "AWS" as your cloud provider
-3. Choose "AWS Organizations"
-4. Provide your organization's root account credentials
-5. Select the accounts you wish to monitor
-
-### Azure Account Onboarding
+## Add an Azure subscription
 
 #### Individual Subscription
 1. Access the Asecurecloud console
