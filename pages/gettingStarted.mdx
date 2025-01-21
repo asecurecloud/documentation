@@ -11,19 +11,23 @@ You can also find instructions to add an [AWS Organization](gettingStarted/awsOr
 
 ## Add an AWS account
 
-Click on the "New AWS Account" button. You can also go to Settings -> Cloud Settings -> New AWS Account
+Once logged in, click on the "New AWS Account" button.
+
+You can also go to Settings -> Cloud Settings -> New AWS Account
 
 ### Add your AWSccount details
+
 Here you need to provide:
 
 - AWS Account ID
 - AWS Account Name / Description
 - Workload region (where the workload is deployed, e.g. us-east-1)
-- Account Type (Production, Dev, Sandbox)   `used for rule severity weighting`
+- Account Type (Production, Dev, Sandbox) `used for rule severity weighting`
 - Enable Scheduled Assessments on/off (default is On)
 
-Once done, click on the "Add Account and Create Profile" button.
+![Add your AWS account details](/images/AWS-account-details.png)
 
+Once done, click on the "Add Account and Create Profile" button.
 
 ### Create the authentication profile
 
@@ -34,18 +38,22 @@ Here you select permissions for the ASecureCloud to access your AWS account.
 
 Note : You can select read-only or none if you do not use the well-Architected tool.
 
+![Create the authentication profile](/images/AWS-create-auth.png)
+
 Once done, click on the "Continue Profile Setup" button.
-  
 
 ### Finalize the profile setup
 
 Select the IAM Role Name that will be used to access your AWS account.
 
-The system will generate a template for you in both 
+The system will generate a template for you in both
+
 - cloudformation
 - terraform
 
 You can deploy this template directly to your AWS account (recommended) or download it for a manual deployment.
+
+![Finalize the profile setup](/images/AWS-deploy.png)
 
 Once done, click on the "Validate" button.
 
@@ -53,11 +61,13 @@ Once done, click on the "Validate" button.
 
 if the profile is valid, you will see a green checkmark.
 
+![Validate the profile](/images/AWS-validate.png)
+
 You can now click on the "Create Profile and Launch Assessment" button.
 
+Here is a quick gif summarizing the process:
 
-
-
+![AWS onboarding](/images/AWS-onboarding.gif)
 
 ## Add an Azure subscription
 
@@ -77,13 +87,12 @@ Once done, click on the "Next: Subscription Onboarding Method" button.
 
 ### Subscription Onboarding Method
 
-In this step, you can either provide 
+In this step, you can either provide
 
 - Azure Subscription ID (multiple subscriptions are supported )
 - Onboard a Management Group and list all subscriptions in the management group for you to choose from
 
 Select "Manually enter Subscription IDs" and click on "Next:Input Subscriptions" button.
-
 
 ### Input Subscriptions IDs
 
@@ -120,7 +129,6 @@ Once done, click on the "Save Settings" button.
 ## Support
 
 If you encounter any issues during the onboarding process, please contact [support](mailto:support@asecurecloud.com)
-
 
 ## Next Steps
 
