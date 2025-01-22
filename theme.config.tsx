@@ -14,7 +14,7 @@ const config: DocsThemeConfig = {
     defaultMenuCollapseLevel: 1,
   },
   footer: {
-    content: 'Your Company © 2024',
+    content: 'ASecureCloud © 2025',
   },
 }
 
