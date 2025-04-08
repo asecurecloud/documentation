@@ -1,38 +1,86 @@
 ## Conducting a Well-Architected Assessment
 
+ASecureCloud uses the automated assessment of your environment to provide a baseline for your Well-Architected assessment.
+Follow the steps [here](/gettingStarted) to create your first assessment.
 
-ASecureCloud runs an automated assessment of your environment to provide a baseline for your Well-Architected assessment.
+Click on the AWS Well-Architected button to either :
 
-You can either:
+- Create a new workload
 
-- Create a new workload : Requires at least one assessment created (if not, create one following the steps [here](/gettingStarted))
+- Pull down an existing workload from the AWS Well-Architected Tool
 
-- Pull down an existing workload : Needs to be created in the Well-Architected Tool first
-
+![AWS Well-Architected](/images/AWS-WAR-pull.png)
 
 ## Define a New Workload
 
-1. Navigate to the **Well-Architected** page
-2. Click on the **New Workload** button
+By default, the workload scope is the entire account. You can further define the workload scope by :
 
-![New Workload](/images/NewWorkload.png)
+- Select a specific VPC
+- Select Tag(s) for the workload
 
-### Select workload details
+Click on the **New Workload** button to show the workload settings.
 
-You can further define the workload in the pop-up window by selecting
+### Workload Settings
 
-- Lens ( one of the supported lenses)
-- Tags for the workload
-- VPC ID (if you want to scan a specific VPC)
-- Copy from existing workload (if you want to copy an existing workload)
+Here you can select the following :
+
+- Name : The name of the workload
+- Scope : The scope of the workload
+
+  - Tags : Tags for the workload
+  - VPC ID : if you want to scan a specific VPC
+
+- Lenses : one of the supported lenses
+
+- Edit Source : Edit the source of the workload ( can select any of past assessments)
+
+- Copy from existing workload : if you want to copy an existing workload
 
 ![Workload Details](/images/workload-details.png)
 
-### Review Workload answers
+### Automated answers
 
+Once the workload is created, suggestions will be provided based on the assessment and the scope of the workload.
 
-### Receive remediation context and solutions
+Each suggestion can either be accepted or rejected and you can click on the **Suggestions details** to see the evidence for the suggestion.
 
-### Upload to Well-Architected Tool
- 
- 
+![Suggestions details](/images/AWS-WAR-suggestions.png)
+
+:::
+in this example, the question about root user security is marked as failed because the root user is in use.
+:::
+
+### Remediation and Context
+
+For each assessment-based suggestion, you can receive remediation context and solutions.
+
+Just click on the failed check marked in red to bring the remediation context and solutions.
+
+![Remediation context and solutions](/images/AWS-WAR-remediations.png)
+
+### Natural Language Processing
+
+For non-automated questions, you can use the **express review** mode to speed up the review process :
+
+Click on the **express review** checkbox to bring the express review menu :
+
+This mode allows you to :
+
+- Answer groups of questions (e.g answer all the Governance questions at once)
+- Use natural language to answer the questions (e.g answer in French or Spanish)
+
+![Express review menu](/images/AWS-WAR-NLP.png)
+
+:::
+In this example, the user has answered all the "Organization & Culture" questions by talking in natural language and the system has automatically mapped this answer to the questions.
+:::
+
+## Uploading Workload
+
+Once the review is complete, you can upload the workload to the AWS Well-Architected Tool.
+
+You can choose the account and region to upload the workload.
+
+Click on the **Upload** button to upload the workload.
+
+<img src="/images/AWS-WAR-upload.png" alt="Upload workload" width="400" />
