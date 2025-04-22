@@ -1,6 +1,7 @@
 export default {
   index: "Home",
   gettingStarted: "Getting Started",
+  Dashboard: "Dashboard",
   profileManagement: "Profile Management",
   // awsOrganizations: "AWS Organizations",
   // azureManagementGroups: "Azure Management Groups",
