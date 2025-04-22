@@ -1,6 +1,7 @@
 export default {
   index: "Home",
   gettingStarted: "Getting Started",
+  Dashboard: "Dashboard",
   // awsOrganizations: "AWS Organizations",
   // azureManagementGroups: "Azure Management Groups",
   // cloudassessments: "Security Assessments",
