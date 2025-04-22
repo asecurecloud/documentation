@@ -12,7 +12,7 @@ Here you can :
 It includes the following sections:
 
 - [**Overview**](#overview): A high-level overview of your cloud security posture.
-- **Threat Management**: Everything related to threats and recommendations for your cloud environment.
+- [**Threat Management**](#threat-management): Everything related to threats and recommendations for your cloud environment.
 - **Remediation Plan**: A plan for remediating the issues found in your cloud environment.
 - **Assessments Details**: A list of assessments for your cloud environment grouped by security domain or service.
 - **Compliance Reports**: A mapping of compliance standards to your cloud environment.
@@ -23,3 +23,45 @@ It includes the following sections:
 The Overview section provides a quick glance of the status of your cloud.
 
 ![Overview](/images/Dashboard-overview.png)
+
+## Threat Management
+
+This dashboard consolidates the configuration and findings of the security services. For AWS, this includes:
+
+- Threat Detection : Amazon GuardDuty
+- Vulnerability Management : Amazon Inspector
+- Data Protection : Amazon Macie
+- Identity and Access Management : AWS IAM Access Analyzer
+
+![Threat Management](/images/Dashboard-threat-management.png)
+
+For each of these services, you can find more details by clicking and opening the popup tab associated
+
+![aws macie summary](/images/AWS-threatmanagement.png)
+
+## Remediation Plan
+
+The Remediation Plan section provides a list of recommendations for your cloud environment.
+
+![Remediation Plan](/images/AWS-remediationplan.png)
+
+for each of the recommendations, you can find more details by clicking on the recommendation to reveal :
+
+- FAQ : Quick answers to common questions or ask your own!
+- Affected Resources : hyperlinks to the resources impacted
+- Reemediation steps: step by step guide to fix the issue (includes Cloudformation, Console and CLI)
+- Exceptions: a way to exclude resources from future assessments
+
+![Remediation details](/images/AWS-remediationplan-details.png)
+
+## Assessments Details
+
+In this section, you can find the details of the assessment including:
+
+- Security Maturity Graph : Glance at your security maturity accross domains and see how it evolves over time
+- Security Domain Breakdown : Detailed view of the security posture of your cloud environment across domains
+- Service Breakdown : Detailed view of the security posture of your cloud environment across services
+
+![Assessments details](/images/AWS-assessmentsdetails.png)
+
+## Compliance Reports
