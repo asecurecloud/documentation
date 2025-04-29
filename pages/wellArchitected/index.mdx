@@ -1,7 +1,5 @@
 # Automated AWS Well-Architected - Overview
 
-The AWS Well-Architected Framework provides a consistent approach for customers to evaluate architectures and implement scalable designs.
-
 ASecureCloud simplifies the process of completing a Well-Architected Review (<span style={{ textDecoration: 'underline' }}>WAR</span>) by automating the data collection and providing suggestions to the questionnaire.
 
 <br />
@@ -26,9 +24,20 @@ ASecureCloud simplifies the process of completing a Well-Architected Review (<sp
 - Automated environment scanning
 - Reduce review time by up to 50% with automated assessments
 - Auto-populate Well-Architected questions based on environment analysis
-- AI-powered answer suggestions
+- AI-powered answer suggestions with natural language processing support
 - Generate remediation templates for identified improvements
 - Track progress over time with continuous monitoring
+
+### Assessment Workflow
+
+The Well-Architected assessment process with ASecureCloud follows these steps:
+
+1. **Create or Import a Workload** - Start a new assessment or pull an existing workload from AWS
+2. **Define Workload Scope** - Scope by account, VPC, or resource tags
+3. **Review Automated Suggestions** - Evaluate AI-generated answers based on environment analysis
+4. **Remediate Issues** - Access remediation guidance for failed checks
+5. **Express Review Mode** - Use natural language to answer multiple questions at once
+6. **Upload to AWS** - Sync completed assessments with the AWS Well-Architected Tool
 
 ### Deployment Options
 
@@ -36,10 +45,6 @@ There are two deployment options for the Well-Architected Review:
 
 - **Public SaaS**: Solution deployed in us-east-1 and accessible to all AWS customers.
 - **Private SaaS**: Dedicated Solution deployed in the region of your choice and accessible to your organization only. Can be deployed in your own AWS account or in ASecureCloud's AWS account.
-
-The following table summarizes the differences between the two deployment options:
-
-<br />
 
 <div style={{ display: 'flex', justifyContent: 'center' }}>
 
@@ -54,3 +59,5 @@ The following table summarizes the differences between the two deployment option
 | Cost                     | Pay-as-you-go    | More cost effective than Public SaaS (Starting at 750 USD/month) |
 
 </div>
+
+Ready to get started? Follow the steps [here](/gettingStarted) to create your first assessment or learn more about [conducting a Well-Architected Review](/wellArchitected/conductingwar).
