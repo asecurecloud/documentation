@@ -12,7 +12,7 @@ const config: DocsThemeConfig = {
   ),
   logo: <span>ASecureCloud Documentation</span>,
   project: {
-    link: 'https://github.com/rachcorp/Docs',
+    link: 'https://github.com/asecurecloud/documentation',
   },
   docsRepositoryBase: 'https://github.com/asecurecloud/documentation',
   navigation: {
