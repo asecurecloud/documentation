@@ -14,7 +14,7 @@ const config: DocsThemeConfig = {
   project: {
     link: 'https://github.com/rachcorp/Docs',
   },
-  docsRepositoryBase: 'https://github.com/rachcorp/Docs',
+  docsRepositoryBase: 'https://github.com/asecurecloud/documentation',
   navigation: {
     prev: true,
     next: true
