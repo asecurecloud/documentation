@@ -1,0 +1,172 @@
+# AWS ACE Integration
+
+This integration allows you to Create, Update and properly Tag opportunities in the ACE system.
+
+Login > Click on Well-Architected tab and find the ACE Opportunity button. 
+
+![ACE Opportunity](/images/ace.png)
+
+## Integration Details
+
+An IAM role is required to manage the ACE portal from ASecureCloud and you can deploy this role via **CloudFormation** or **Terraform**.
+
+![ACE role](/images/ace-role.png)
+
+### Permissions required
+
+The following permissions are implemented by the templates:
+
+<details>
+<summary>Click to expand CloudFormation Template</summary>
+
+```yaml
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "",
+    "Resources": {
+        "IamRole": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+                "RoleName": "ASecureCloudAceIntegrationRole",
+                "Description": "IAM Role to allow acccess for to Partner Central",
+                "AssumeRolePolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "AWS": "ASecureCloud-AccountID"
+                            },
+                            "Action": [
+                                "sts:AssumeRole"
+                            ],
+                            "Condition": {
+                                "StringEquals": {
+                                    "sts:ExternalId": "RANDOM-ID"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "Policies": [
+                    {
+                        "PolicyName": "PartnerCentralAccess",
+                        "PolicyDocument": {
+                            "Version": "2012-10-17",
+                            "Statement": [
+                                {
+                                    "Effect": "Allow",
+                                    "Action": [
+                                        "partnercentral:CreateOpportunity",
+                                        "partnercentral:UpdateOpportunity",
+                                        "partnercentral:ListOpportunities",
+                                        "partnercentral:GetOpportunity",
+                                        "partnercentral:GetAwsOpportunitySummary",
+                                        "partnercentral:ListSolutions",
+                                        "partnercentral:AssociateOpportunity",
+                                        "partnercentral:DisassociateOpportunity",
+                                        "partnercentral:AssignOpportunity",
+                                        "partnercentral:SubmitOpportunity",
+                                        "partnercentral:AcceptEngagementInvitation",
+                                        "partnercentral:CreateEngagementInvitation",
+                                        "partnercentral:RejectEngagementInvitation",
+                                        "partnercentral:GetEngagementInvitation",
+                                        "partnercentral:ListEngagementInvitations",
+                                        "partnercentral:StartEngagementFromOpportunityTask",
+                                        "partnercentral:StartEngagementByAcceptingInvitationTask",
+                                        "partnercentral:CreateResourceSnapshotJob",
+                                        "partnercentral:StartResourceSnapshotJob",
+                                        "partnercentral:TagResource",
+                                        "partnercentral:UntagResource",
+                                        "partnercentral:ListTagsForResource",
+                                        "partnercentral:CreateEngagement"
+                                    ],
+                                    "Resource": "*"
+                                },
+                                {
+                                    "Effect": "Allow",
+                                    "Action": [
+                                        "aws-marketplace:ListEntities",
+                                        "aws-marketplace:DescribeEntity"
+                                    ],
+                                    "Resource": "*"
+                                },
+                                {
+                                    "Effect": "Allow",
+                                    "Action": [
+                                        "aws-marketplace:SearchAgreements",
+                                        "aws-marketplace:DescribeAgreement"
+                                    ],
+                                    "Resource": "*",
+                                    "Condition": {
+                                        "StringEquals": {
+                                            "aws-marketplace:PartyType": "Proposer"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "Parameters": {},
+    "Metadata": {},
+    "Conditions": {}
+}
+```
+
+</details>
+
+### Deploy to APN-Linked AWS account 
+
+The role will need to be deployed on your [APN Portal](https://partnercentral.awspartner.com/) linked AWS account. To find this account:
+
+Login to your AWS APN portal and select **Home** as seen below
+
+![APN Linked account](/images/apn-linked.png) 
+
+Once the CloudFormation deployment is completed, go back to ASecureCloud and click on **Validate**.
+
+![validate role](/images/validate.png) 
+
+## Opportunity operations
+
+### Create
+
+1. Click on the **ACE Opportunity** button to create a new opportunity
+2. Fill in the required fields:
+   - Opportunity Name
+   - Customer Name
+   - Opportunity Type
+   - Expected Close Date
+   - Deal Size
+   - Description
+
+### Update
+
+1. Click on the **ACE Opportunity** button
+2. Select the existing opportunity from the dropdown
+3. Update the required fields
+4. Click **Save** to update the opportunity
+
+### Proper Program Tagging
+
+1. Click on the **ACE Opportunity** button
+2. Select the existing opportunity from the dropdown
+3. Add or update tags:
+   - Well-Architected Lens
+   - Assessment Type
+   - Customer Segment
+   - Region
+4. Click **Save** to update the tags
+
+### Other Tags
+
+The ACE integration automatically syncs:
+- Assessment results
+- Remediation status
+- Customer feedback
+- Follow-up actions
+
