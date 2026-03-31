@@ -2,6 +2,7 @@ export default {
   index: "Home",
   gettingStarted: "Getting Started",
   Dashboard: "Dashboard",
+  costManagement: "Cost Management",
   UserSettings: "User Settings",
   //profileManagement: "Profile Management",
   // awsOrganizations: "AWS Organizations",
